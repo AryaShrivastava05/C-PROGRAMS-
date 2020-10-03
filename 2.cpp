@@ -2,10 +2,10 @@
 
 using namespace std;
 
-int search(int arr[], int n, int item)
+int search(int arr[], int a, int item)
 {
     int i;
-    for (i = 0; i < n; i++) 
+    for (i = 0; i < a; i++) 
         if (arr[i] == item) 
             return i; 
     return -1; 
@@ -14,17 +14,17 @@ int search(int arr[], int n, int item)
 
 int main()
 {
-    int n,i;
+    int a,i;
     int item;
     cout<<"Enter Size of Array:";
-    cin>>n;
+    cin>>a;
     int * arr = new int;
     cout<<"Enter Elements";
-    for(i=0;i<n;i++)
+    for(i=0;i<a;i++)
         cin>>arr[i];
     cout<<"Enter the element to be searched";
     cin>>item;
-    int result = search(arr, n, item);
+    int result = search(arr, a, item);
     if(result == -1)
         cout<<"Element is not present in array";
     else
